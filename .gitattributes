@@ -1,1 +1,2 @@
-file filter=lfs diff=lfs merge=lfs -text
+wiki_bert/pieceid2feature_bert_768_2.txt filter=lfs diff=lfs merge=lfs -text
+wiki_en/pieceid2feature_400.txt filter=lfs diff=lfs merge=lfs -text
