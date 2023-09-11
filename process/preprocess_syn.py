@@ -29,16 +29,22 @@ def get_syn_relation(config, word_map):
             syn_set[word_map[word]] = wid_syns_filtered
 
         if len(syn_set) >= 10000:
-            samples = [w+'\t'+(' '.join(s)) for w, s in syn_set.items()]
-            print(samples[0])
-            syn_w.write('\n'.join(samples))
-            syn_w.write('\n')
+            for w, s_list in syn_set.items():
+                for s in s_list:
+                    syn_w.write(w+" "+s+" "+"1\n")
+            # samples = [w+'\t'+(' '.join(s)) for w, s in syn_set.items()]
+            # print(samples[0])
+            # syn_w.write('\n'.join(samples))
+            # syn_w.write('\n')
             syn_set = {}
         
-    samples = [w+'\t'+(' '.join(s)) for w, s in syn_set.items()]
-    print(samples[0])
-    syn_w.write('\n'.join(samples))
-    syn_w.write('\n')
+    # samples = [w+'\t'+(' '.join(s)) for w, s in syn_set.items()]
+    # print(samples[0])
+    # syn_w.write('\n'.join(samples))
+    # syn_w.write('\n')
+    for w, s_list in syn_set.items():
+        for s in s_list:
+            syn_w.write(w+" "+s+" "+"1\n")
 
 
 if __name__ == '__main__':
