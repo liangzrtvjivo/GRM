@@ -97,10 +97,16 @@ cd grm
 bash reproduce_w2v.sh
 ```
 
-For BERT model, downloading resultfile_grm_bert_128_1e-3(https://drive.google.com/file/d/1EgsnFZR3O06qigSnJojTWvJpkiZ47ldt/view?usp=drive_link) and release it into the /grm/result/
+For BERT model in NER task, downloading resultfile_grm_bert_128_1e-3(https://drive.google.com/file/d/1EgsnFZR3O06qigSnJojTWvJpkiZ47ldt/view?usp=drive_link) and release it into the /grm/result/
 ```bash
 cd grm
-bash reproduce_bert.sh
+bash reproduce_bert_ner.sh
+```
+
+For BERT model in POS tagging task, downloading resultfile_grm_bert_64_5e-4(https://drive.google.com/file/d/1oS6MO0F1g7KLpPfzYsCZGgdmIDs6xZ9j/view?usp=drive_link) and release it into the /grm/result/
+```bash
+cd grm
+bash reproduce_bert_pos.sh
 ```
 
 

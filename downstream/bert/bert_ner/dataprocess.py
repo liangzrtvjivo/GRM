@@ -90,9 +90,9 @@ def load_ner_data(data_dir, tokenizer, max_length, batch_size, data_type, label_
     texts,labels,isoovs = examples
 
     enc = tokenizer("london", truncation=True, padding=True, max_length=max_length)
-    print("enc",enc)
+    # print("enc",enc)
     enc = tokenizer("-docstart-", truncation=True, padding=True, max_length=max_length)
-    print("enc1",enc)
+    # print("enc1",enc)
 
     encoding = tokenizer(texts, truncation=True, padding=True, max_length=max_length, return_offsets_mapping=True)
     # enc = tokenizer("london", truncation=True, padding=True, max_length=max_length, return_offsets_mapping=True)
@@ -139,12 +139,12 @@ def load_ner_data(data_dir, tokenizer, max_length, batch_size, data_type, label_
                 isoov_list.append(0)
                 wids_list.append(0)
             token_idx += 1
-        if index < 3:
-            print("texts",texts[index])
-            print("ids",encoding["input_ids"][index])
-            print("mask",encoding["attention_mask"][index])
-            print("tokens",tokens)
-            print("label_list",label_list)
+        # if index < 3:
+        #     print("texts",texts[index])
+        #     print("ids",encoding["input_ids"][index])
+        #     print("mask",encoding["attention_mask"][index])
+        #     print("tokens",tokens)
+        #     print("label_list",label_list)
         all_label_list.append(label_list)
         all_isoov_list.append(isoov_list)
         all_wids_list.append(wids_list)
